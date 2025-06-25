@@ -1,0 +1,268 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.app {
+  background: linear-gradient(to right, #ffffff, #f3e8ff);
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: rgba(251, 247, 247, 0.019);
+  border-radius: 20px;
+  border: solid white 10px;
+}
+/* Apply 3D effect in navbar */
+.navbar,
+.section {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  will-change: transform;
+}
+
+/* Navbar 3D hover */
+.navbar:hover {
+  transform: rotateX(2deg) rotateY(-2deg) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  position: relative;
+}
+
+/* Section 3D hover */
+.section:hover {
+  transform: rotateX(3deg) rotateY(-3deg) scale(1.02);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+  z-index: 10;
+  position: relative;
+}
+
+.logo a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2563eb;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px rgba(243, 5, 5,0.5);
+}
+
+
+.nav-buttons a {
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 16px;
+  border-radius: 6px;
+  background-color: #2563eb;
+  color: white;
+  transition: all 0.3s ease;
+
+}
+
+.nav-buttons a:hover {
+  background-color: #e0e7ff;
+  color: #111;
+}
+
+/* Section */
+.section {
+  text-align: center;
+  padding: 60px 20px;
+  flex: 1;
+  transition: all 0.5s ease-in-out;
+  border-radius: 40px;
+}
+ @keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+ 
+.icon {
+  background: linear-gradient(to bottom right, #3b82f6);
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 30px;
+  border-radius: 50%;
+  font-size: 2.5rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  
+
+  /* Bounce animation  */
+   animation: bounce 2s infinite;
+}
+
+/* Parent container for 3D effect */
+.section {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  will-change: transform;
+}
+
+/* 3D hover effect on the entire section */
+.section:hover {
+  transform: rotateX(10deg) rotateY(-15deg) rotateZ(1deg) scale(1.02);
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.2);
+  z-index: 70;
+  position: relative;
+}
+
+
+.section h1 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+  animation: fadeSlideUp 1s ease-out forwards;
+}
+
+.section h1 span {
+  color: #8b5cf6;
+  font-weight: bold;
+}
+
+.section p {
+  max-width: 720px;
+  margin: 0 auto 30px;
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.6;
+  animation: fadeIn 1.5s ease-out 0.5s forwards;
+}
+
+
+
+.link {
+  text-decoration: none;
+  font-size: larger;
+  font-weight: bolder;
+  letter-spacing: 2px;
+  color: white;
+}
+.link:hover{
+  color: red;
+}
+.btn-style {
+  padding: 10px 20px;
+  background-color: #5607e8;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.btn-style:hover {
+  background-color: #45a049;
+  border: solid yellow 1px;
+}
+
+/* Animations */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.slider-text {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .nav-buttons {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+  }
+
+  .section h1 {
+    font-size: 2rem;
+  }
+
+  .section p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .btn {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo a {
+    font-size: 1.3rem;
+  }
+
+  .icon {
+    width: 70px;
+    height: 70px;
+    font-size: 2rem;
+  }
+
+  .section h1 {
+    font-size: 1.5rem;
+  }
+
+  .section p {
+    font-size: 0.95rem;
+  }
+}

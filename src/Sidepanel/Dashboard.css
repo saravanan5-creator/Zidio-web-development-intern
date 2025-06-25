@@ -1,0 +1,105 @@
+.dashboard {
+  background-color: #0f0f0f;
+  color: #fff;
+  padding: 2rem;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+.dashboard-title {
+  font-size: 2rem;
+  border-bottom: 2px solid #00bcd4;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.3rem;
+}
+
+.status-text {
+  font-size: 1.2rem;
+  color: #bbb;
+}
+
+.file-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.file-item {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.file-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 10px rgba(0, 188, 212, 0.6);
+}
+
+.file-name {
+  font-weight: 600;
+  color: #eee;
+}
+
+.file-date {
+    margin: 15px;
+  font-size: 0.9rem;
+  color: #999;
+}
+
+@media (max-width: 600px) {
+  .file-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .file-date {
+    margin-top: 0.5rem;
+  }
+}
+.file-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.edit-btn,
+.delete-btn,
+.save-btn {
+  background-color: #00bcd4;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.delete-btn {
+  background-color: #e53935;
+}
+
+.edit-btn:hover,
+.save-btn:hover {
+  background-color: #0097a7;
+}
+
+.delete-btn:hover {
+  background-color: #c62828;
+}
+
+.edit-input {
+  padding: 6px;
+  font-size: 1rem;
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #555;
+  border-radius: 6px;
+  margin-right: 0.5rem;
+}
