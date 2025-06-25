@@ -17,11 +17,6 @@ function Sidebar() {
                 <Link to="/dashboardlayout/upload">Upload Files</Link>
             </div>
 
-            <div className="sidebar-item">
-                <i className="bi bi-robot"></i>
-                <Link to="/dashboardlayout/aiinsight">AI Insight</Link>
-            </div>
-
             <div className="sidebar-item logout">
                 <i className="bi bi-box-arrow-right"></i>
                 <Link to="/">Log out</Link>

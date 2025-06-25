@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './pro.css';
 import { Link } from 'react-router-dom';
 
-function Pro() {
+function Home() {
   const headings = [
     "Transform Your Excel Data",
     "Visualize with Stunning Charts",
@@ -27,8 +27,8 @@ function Pro() {
         // Change index after fade-out ends
         setIndex((prevIndex) => (prevIndex + 1) % headings.length);
         setFade(true); // trigger fade-in
-      }, 500); // match fade-out duration
-    }, 4000);
+      }, 250); // match fade-out duration
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);
@@ -39,7 +39,6 @@ function Pro() {
       <header className="navbar">
         <div className="logo">📊 <a href="">ExcelAnalytics</a></div>
         <nav className="nav-buttons">
-          <a href="#" className="login">Log in</a>
           <Link to="/signup">Signup</Link>
         </nav>
       </header>  
@@ -73,4 +72,4 @@ function Pro() {
   );
 }
 
-export default Pro;
+export default Home;

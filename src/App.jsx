@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Pro from './web page/Pro';
+import Home from './web page/Home';
 import Signin from './Signin';
 import Signup from './Signup';
 import Dashboard from './Sidepanel/Dashboard';
@@ -13,7 +13,7 @@ import AInsight from './Sidepanel/AInsight';
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Pro />
+    element: <Home />
   },
   {
     path: '/signup',

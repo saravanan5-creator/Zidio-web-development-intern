@@ -1,50 +1,3 @@
-// import { useEffect, useState } from "react";
-// import './Dashboard.css'
-
-// function Dashboard() {
-//   const [files, setFiles] = useState([]);
-//   const [loading, setLoading] = useState(true);
-
-//   useEffect(() => {
-//     const fetchFiles = async () => {
-//       try {
-//         const response = await fetch("http://localhost:5000/api/files");
-//         if (!response.ok) throw new Error("Failed to fetch file history");
-//         const data = await response.json();
-//         setFiles(data);
-//       } catch (err) {
-//         console.error("Error fetching file history:", err);
-//       } finally {
-//         setLoading(false);
-//       }
-//     };
-
-//     fetchFiles();
-//   }, []);
-
-//   return (
-//     <div className="dashboard">
-//       <h1>📂 Uploaded File History</h1>
-
-//       {loading ? (
-//         <p className="status-text"> Loading...</p>
-//       ) : files.length === 0 ? (
-//         <p>No files uploaded yet.</p>
-//       ) : (
-//         <ul className="file-list">
-//           {files.map((file, index) => (
-//             <li key={index} className="file-item">
-//               <strong>{file.filename}</strong> — Uploaded on{" "}
-//               {new Date(file.uploadedAt).toLocaleString()}
-//             </li>
-//           ))}
-//         </ul>
-//       )}
-//     </div>
-//   );
-// }
-
-// export default Dashboard;
 import { useEffect, useState } from "react";
 import "./Dashboard.css";
 
@@ -105,6 +58,10 @@ function Dashboard() {
 
   return (
     <div className="dashboard">
+      <div className="greeting">
+        <h1>Hello User!</h1>
+      </div>
+      
       <h1 className="dashboard-title">📂 Uploaded File History</h1>
 
       {loading ? (

@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom'; // You might not need this if you only have a sign-in form.
 
 function Signin() {
   const [username, setUsername] = useState('');
@@ -15,7 +14,7 @@ function Signin() {
 
     if (username === storedUsername && password === storedPassword) {
       alert('Signin successful!');
-      navigate('/dashboardlayout'); 
+      navigate('/dashboardlayout'); // ✅ correct path
     } else {
       alert('Invalid username or password');
     }
@@ -45,7 +44,7 @@ function Signin() {
           style={styles.input}
           required
         />
-        <button type="submit" style={styles.button}>Sign In</button>
+        <button type="submit" style={styles.button}>Sign In</button> {/* ✅ NO <Link> */}
       </form>
     </div>
   );

@@ -5,7 +5,14 @@
   min-height: 100vh;
   font-family: "Poppins", sans-serif;
 }
-
+.greeting {
+  text-align: flex-start;
+  font-size: bold;
+  font-style: italic;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+  box-shadow: 1px 2px 10px 10px rgba(59, 14, 209, 0.5);
+}
 .dashboard-title {
   font-size: 2rem;
   border-bottom: 2px solid #00bcd4;
